@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>JF Dev - Conversor de Moedas</title>
+</head>
+
+<body>
+    <img class="logo" src="./img/logo.gif" alt="logo-convert-money">
+
+    <main>
+        <label>
+            Converter <b>de:</b>
+            <select class="currency-convert">
+                <option value="real">R$ Real Brasileiro</option>
+                <option value="dolar">US$ Dólar Americano</option>
+                <option value="euro">€ Euro</option>
+                <option value="bitcoin">₿ Bitcoin</option>
+                <option value="libra">£ Libra Esterlina</option>
+            </select>
+        </label>
+
+        <label>
+            Converter <b>para:</b>
+            <select class="currency-select">
+                <option value="dolar">US$ Dólar Americano</option>
+                <option value="euro">€ Euro</option>
+                <option value="bitcoin">₿ Bitcoin</option>
+                <option value="libra">£ Libra Esterlina</option>
+                <option value="real">R$ Real Brasileiro</option>
+            </select>
+        </label>
+
+        <label>
+            Valor:
+            <input class="input-currency" placeholder="Digite o valor a ser convertido">
+        </label>
+
+        <button class="convert-button"><b>Converter</b></button>
+
+        <section>
+            <div class="currency-box">
+                <img class="currency-image-origem"src="./img/real.png" alt="icone-real">
+                <p class="currency" id="currency-name-origem">Real</p>
+                <p class="currency-value-to-convert">R$ 0,00</p>
+            </div>
+
+            <img class="arrow-img" src="./img/arrow-down.png" alt="icone-seta">
+
+            <div class="currency-box">
+                <img class="currency-image" src="./img/dolar.png" alt="icone-dolar">
+                <p class="currency" id="currency-name">Dólar Americano</p>
+                <p class="currency-value">US$ 0,00</p>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+<script src="./script.js"></script>
+
+<footer>
+    &copy; 2026 - Jonas Filho Dev&REG;
+    <img class="logo-footer" src="./img/JF logo.png" alt="logo-JF">
+</footer>
+
+</html>
