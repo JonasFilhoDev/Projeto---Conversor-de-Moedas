@@ -1,6 +1,6 @@
 <h1 text align="center">Conversor de Moedas</h1>
 <br>
-<p>Projeto criado, utilizando conhecimento adquirido no <a href="http://rodolfomori.com.br/devclub">DevClub</a></p>
+<p>Projeto criado, utilizando conhecimento adquirido no <a href="https://devclub.com.br/">DevClub</a></p>
 <p>Esse projeto foi extremamente importante para mim, pois testou minhas capacidades
     de procurar e resolver problemas no código.</p>
 <br>
