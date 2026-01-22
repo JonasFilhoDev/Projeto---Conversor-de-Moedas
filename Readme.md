@@ -6,6 +6,7 @@
 <br>
 <p>Confesso que perdi a hora tentando resolver um problema de conversão (por exemplo: de dolar para real), mas
 não desisti. Chamei meu melhor amigo "Google" e fomos tentando, até que consegui!!</p>
+<p><b>Agora totalmente funcional, com consumo de API.</b></p>
 <br>
 "O lema é jamais desistir se está dificil, pq logo será tudo fácil"
 <br>
