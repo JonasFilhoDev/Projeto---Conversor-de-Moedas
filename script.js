@@ -1,24 +1,29 @@
 const convertButton = document.querySelector(".convert-button")
-const currencySelect = document.querySelector(".currency-select") 
-const currencyConvert = document.querySelector(".currency-convert") 
+const currencySelect = document.querySelector(".currency-select")
+const currencyConvert = document.querySelector(".currency-convert")
 
-function convertValues() {
+const convertValues = async () => {
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValuetoConvert = document.querySelector(".currency-value-to-convert")
     const currencyValuetoConverted = document.querySelector(".currency-value")
 
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL")
+        .then(response => response.json())
+
+    console.log(data)
+
     const valor = {
-        real: 1.00,
-        dolar: 5.20,
-        euro: 6.20,
-        bitcoin: 117000.00,
-        libra: 7.30
+        dolar: data.USDBRL.high,
+        euro: data.EURBRL.high,
+        bitcoin: data.BTCBRL.high,
+        libra: data.GBPBRL.high,
+        real: 1
     }
 
-    // Calcular o valor em Real primeiro
+
     const valorInReal = inputCurrencyValue * valor[currencyConvert.value]
 
-    // Converter para a moeda de destino
+
     if (currencySelect.value == "dolar") {
         currencyValuetoConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
@@ -54,7 +59,7 @@ function convertValues() {
         }).format(valorInReal / valor.real)
     }
 
-    // Exibir o valor de origem
+
     if (currencyConvert.value == "real") {
         currencyValuetoConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
